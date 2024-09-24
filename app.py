@@ -3,7 +3,7 @@ import requests
 from weasyprint import HTML
 import os
 
-app = Flask(__name__)
+app = Flask("Scratchify")
 
 SCRATCH_API_URL = "https://api.scratch.mit.edu/projects/"
 
