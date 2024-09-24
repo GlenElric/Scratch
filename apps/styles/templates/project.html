@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ project['title'] }}</title>
+</head>
+<body>
+    <h1>{{ project['title'] }}</h1>
+    <p>{{ project['description'] }}</p>
+    
+    <h3>Author: {{ project['author']['username'] }}</h3>
+    <p><a href="{{ project['history']['shared'] }}">Project Link</a></p>
+
+    <h2>Embed Scratch Project</h2>
+    <iframe src="https://scratch.mit.edu/projects/{{ project['id'] }}/embed" width="485" height="402" frameborder="0" allowfullscreen></iframe>
+
+    <a href="{{ url_for('generate_pdf', project_id=project['id']) }}">Generate PDF</a>
+</body>
+</html>

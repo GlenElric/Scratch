@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Project Viewer</title>
+</head>
+<body>
+    <h1>Scratch Project Viewer</h1>
+    <form action="{{ url_for('project') }}" method="POST">
+        <label for="project_id">Enter Scratch Project ID:</label>
+        <input type="text" id="project_id" name="project_id" required>
+        <button type="submit">View Project</button>
+    </form>
+</body>
+</html>
